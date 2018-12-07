@@ -9,36 +9,37 @@
 
 <body style="margin:0px;">
   <section>
-    <div class="top_bar">Option</div>
+    <div class="topBar">Option</div>
   </section>
   <div style="margin:5px;">
-    <div class="update_info">
-      Version 1.0.0 업데이트 내역<br>
-      -옵션창이 되었습니다.<br>
-      사용성 개선을 위해 키워드 설정들이 옵션창으로 이동되었습니다.<br>
-      이제 원클릭으로 사진 찾기가 가능해졌습니다.<br>
-      앞으로 옵션창에서 모든 옵션과 추가 정보를 확인하실 수 있습니다.
+    <div class="updateInfo">
+      <a id="t1" onclick="toggleUpdataInfo()">업데이트 내역 보기</a>
+      <div id="updateInfo" style="display:none;">
+        Version 1.0.0 업데이트 내역<br>
+        -옵션창이 추가 되었습니다.<br>
+        -사용성 개선을 위해 키워드 설정들이 옵션창으로 이동되었습니다.<br>
+        -이제 클릭으로 사진 찾기가 가능해졌습니다.<br>
+        -앞으로 옵션창에서 모든 옵션과 추가 정보를 확인하실 수 있습니다.
+      </div>
     </div>
-    <p class="setting_list">키워드 설정</p>
+    <p class="settingList">키워드 설정</p>
     <button type="button" name="button" id="nanase">西野七瀬</button>
-    <button type="button" name="button"
-       id="nogi">乃木坂</button>
+    <button type="button" name="button" id="nogi">乃木坂</button>
     <hr style="margin-left:0px; margin-top:1px; margin-bottom:1px;
        width:180px;">
-    <button type="button" name="button"
-       id="yoda">与田祐希 </button>
-    <button type="button" name="button"
-       id="asuka">齋藤飛鳥</button>
-    <button type="button" name="button"
-       id="kubo">久保史緒里</button>
-    <script src="script_action_click.js">
+    <button type="button" name="button" id="yoda">与田祐希 </button>
+    <button type="button" name="button" id="asuka">齋藤飛鳥</button>
+    <button type="button" name="button" id="kubo">久保史緒里</button>
+    <script src="clickEvent.js">
     </script>
-    <p class='setting_list'>자동 다운로드 설정</p>
-     <p>해당 기능은 준비 중입니다.</p>
+    <p class='settingList'>자동 다운로드 설정</p>
+    <p>해당 기능은 준비 중입니다.</p>
     <footer>
       <hr style="border-color:rgba(75,88,166,1)">
-      이 프로그램은 나마갤 유저들의 편의성을 위해 만들어졌습니다.<br>Copyright&copy여섯밤
-      <a href="http://gall.dcinside.com/mgallery/board/lists?id=nanase7" style="text-decoration:none; float:right;">나마갤 바로가기</a></footer>
+      이 프로그램은 나마갤 유저들의 편의성을 위해 만들어졌습니다.<br>Copyright&copy여섯밤 <a href="https://creativecommons.org/licenses/by/4.0/deed.ko">CC-BY-4.0</a>
+      <a href="http://gall.dcinside.com/mgallery/board/lists?id=nanase7" style="text-decoration:none; float:right;">나마갤
+        바로가기</a>
+    </footer>
   </div>
 </body>
 
