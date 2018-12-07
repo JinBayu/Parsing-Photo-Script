@@ -1,5 +1,22 @@
 @charset "UTF-8";
-.top_bar {
+
+a{
+  color:rgb(37, 139, 255);
+  text-decoration: none;
+}
+a:visited{
+  color:rgb(37, 139, 255);
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+footer {
+  font-size:12px;
+}
+.topBar {
   background-color:rgba(75,88,166,1);
   font-size:20px;
   margin:0;
@@ -11,12 +28,15 @@
   color:white
 }
 
-.update_info {
+.updateInfo {
   float:right;
-  width:40%
+  width:40%;
+}
+.updateInfo > #updateInfo {
+  color:black;
 }
 
-.setting_list {
+.settingList {
   font-size:17px;
   font-weight:bold;
   margin-bottom:10px;
