@@ -3,6 +3,7 @@ let nogi = document.getElementById('nogi');
 let yoda = document.getElementById('yoda');
 let asuka = document.getElementById('asuka');
 let kubo = document.getElementById('kubo');
+let toggleUpdateInfo=document.getElementById('t1');
 /*------------------------------------*/
 let member = "default"
 nanase.onclick = function(element) {
@@ -59,8 +60,7 @@ kubo.onclick = function(element) {
     console.log('Value currently is ' + result.key);
   });
 }
-/*-----------------------------------*/
-function toggleUpdataInfo() {
+toggleUpdateInfo.onclick=function() {
   var target=document.getElementById("updateInfo");
   if(target.style.display=="none"){
     target.style.display="block";
