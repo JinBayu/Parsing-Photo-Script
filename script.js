@@ -1,6 +1,6 @@
 function indexing(keyword, mode) { // mode:1 로그 출력 || mode:0 로그 미 출력
   var j = 0;
-  if (mode) { console.log(keyword.key); }
+  if (mode) { console.log("검색 단어 : " + keyword.key); }
   var documentList = new Array();
   documentList = document.querySelectorAll("div[class=WB_detail]");
   if (mode) { console.log("검색된 글의 개수 : " + documentList.length); }
@@ -12,9 +12,7 @@ function indexing(keyword, mode) { // mode:1 로그 출력 || mode:0 로그 미 
     }
   }
   if (mode) { console.log(keyword.key + "가 들어간 글의 개수 : " + list.length); }
-  return list;
-}
-function windowOpen(list) {
+  var k = 0; var ImageUrlList = new Array();
   for (i = 0; i < list.length; i++) {
     var arr = list[i].querySelector("div[class=media_box]").querySelectorAll("li[class^=WB_pic]");
     for (j = 0; j < arr.length; j++) {
@@ -23,10 +21,15 @@ function windowOpen(list) {
       ImageUrl = ImageUrl.replace('thumb150', 'large');
       ImageUrl = ImageUrl.replace('orj360', 'large');
       ImageUrl = ImageUrl.replace('mw690', 'large');
-      window.open(ImageUrl, "_blank");
+      ImageUrlList[k++] = ImageUrl;
     }
   }
+  if(mode){console.log("사진 개수 : "+ImageUrlList.length);}
+  return ImageUrlList;
 }
+
+
 chrome.storage.sync.get(['key'], function (result) {
-  windowOpen(indexing(result,1));
+  chrome.runtime.sendMessage(indexing(result, 1), function () {
+  });
 });
