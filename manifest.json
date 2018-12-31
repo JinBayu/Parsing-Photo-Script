@@ -4,12 +4,7 @@
   "name": "parsingPhoto",
   "options_page": "options.html",
   "description": "특정 키워드 기반 웨이보 사진 찾기",
-<<<<<<< HEAD
   "version": "1.1.0",
-=======
-  "version": "1.0.7",
->>>>>>> 917a34712e05ce8994958f3a31b1f64ef3b2eea5
-
   "background": {
     "page": "background.html"
   },
