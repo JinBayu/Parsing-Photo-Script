@@ -1,3 +1,3 @@
 chrome.tabs.executeScript({
-  file: 'script_script.js'
+  file: 'script.js'
 });
